@@ -43,7 +43,29 @@ This assessment follows these stages:
 ## 5. Findings
 
 ### 5.1 VSFTPD 2.3.4 Backdoor
-***Service:** FTP (TCP port 21)
+
+**Service:** FTP (TCP port 21)
+
+**Identification:**
+
+Nmap identified an FTP service running VSFTPD version 2.3.4 on the target machine.
+
+**Exploitation:**
+
+The Metasploit module `exploit/unix/ftp/vsftpd_234_backdoor` was used to validate the known backdoor vulnerability.
+
+**Result:**
+
+A command shell was successfully established. The `whoami` and `id` commands confirmed that the session had root privileges (`uid=0(root)`).
+
+**Evidence:**
+
+![VSFTPD exploitation and root verification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/vsftpd/4_exploit_and_root_shell_verification.png)
+
+### 5.2 SUID Nmap Privilege Escalation
+
+**Service:** Nmap (installed on the target machine)
+
 **Identification:**
 
 The target was accessed through SSH using the `msfadmin` account. The command `ls -l /usr/bin/nmap` revealed that the Nmap executable had the SUID permission enabled and was owned by root.
@@ -58,9 +80,11 @@ Privilege escalation was successful. The `whoami` command returned `root`, while
 
 **Evidence:**
 
-- SUID permission and ownership screenshot.
-- Nmap version screenshot.
-- Successful privilege escalation screenshot.
+![SUID permissions and ownership](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/1-suid-nmap-permissions.png)
+
+![Nmap version](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/2-nmap-version.png)
+
+![SUID Nmap privilege escalation](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/3-suid-nmap-root-escalation.png)
 
 ### 5.3 UnrealIRCd 3.2.8.1 Backdoor (CVE-2010-2075)
 
@@ -80,9 +104,11 @@ Root access was confirmed using `whoami` and `id`. The target hostname was also 
 
 **Evidence:**
 
-- UnrealIRCd version identification screenshot.
-- Successful exploitation screenshot.
-- Root access verification screenshot.
+![UnrealIRCd version identification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/1-unrealircd-version-identification.png)
+
+![UnrealIRCd successful exploitation](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/2-unrealircd-exploitation.png)
+
+![UnrealIRCd root access verification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/3-unrealircd-root-verification.png)
 
 ## 6. Security Recommendations
 
