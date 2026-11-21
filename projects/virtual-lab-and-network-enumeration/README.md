@@ -1,44 +1,44 @@
-##Metasploitable2 Vulnerability Assessment and Exploitation
+# Metasploitable2 Vulnerability Assessment and Exploitation
 
 ## 1. Project Overview
 
-In this project, Metasploitable 2, a deliberately compromised Linux Virtual Machine (VM), became the target of this vulnerability evauation and penetration testing session. The purpose of this test was to discover network services that are vulnerable, examine the known vulnerabilities, and conduct a exploitation that's controlled to discover how security flaws might be identified and evaluated.
+In this project, Metasploitable2, an intentionally vulnerable Linux virtual machine (VM), was used as the target for a vulnerability assessment and penetration-testing exercise. The purpose was to identify vulnerable network services, investigate known security weaknesses and perform controlled exploitation to understand how these vulnerabilities could be identified and evaluated.
 
-This evaluation focused on 3 results which are an FTP backdoor, an insecure SUID configuration and an IRC backdoor.
+The assessment focused on three findings: an FTP backdoor, an insecure SUID configuration and an IRC backdoor.
 
-## 2. Lab Enviourment
+## 2. Lab Environment
 
-Oracle VirtualBox was utilised to carry out the evaluation of Metasploitable2 in an isolated virtual box with Kali Linux as the attacking machine.
+Oracle VirtualBox was used to set up an isolated virtual lab environment, with Kali Linux acting as the attacking machine and Metasploitable2 as the target.
 
 | Component | Details |
 |---|---|
-|Attacker Machine| Kali Linux 2024.1 |
-|Target Machine | Metasploitable2|
-|Virtualisation Software | Oracle VirtualBox|
-|Attacker IP | 192.168.56.103 |
-|Target IP | 192.168.56.104|
-| Target Operating System | Metaspolitable2 Linux |
+| Attacker Machine | Kali Linux 2024.1 |
+| Target Machine | Metasploitable2 |
+| Virtualisation Software | Oracle VirtualBox |
+| Attacker IP | 192.168.56.103 |
+| Target IP | 192.168.56.104 |
+| Target Operating System | Metasploitable2 Linux |
 
-The host-only network as allowed for communication between the attacker and target virtual machines so that the vulnerable target wasn't exposed to the external networks.
+A host-only network was configured to allow communication between the attacker and target virtual machines without exposing the vulnerable target to external networks.
 
-## 3. Tools Used 
+## 3. Tools Used
 
-- **Nmap :** Port scanning, service enumeration and host scanning.
-- **Metasploit Framework :** Tool to exploit the discovered vulnerabilities
-- **Netcat :** Command to manually connect and enumerate the IRC service.
-- **Linux Command-Line :** Privaledge verification and system identification.
-- **Oracle VirtualBox:** Establishment and management of the virtual lab environment
+- **Nmap:** Used for host discovery, port scanning and service enumeration.
+- **Metasploit Framework:** Used to validate the identified vulnerabilities through controlled exploitation.
+- **Netcat:** Used to manually connect to and enumerate the IRC service.
+- **Linux Command Line:** Used to verify privileges and identify system information.
+- **Oracle VirtualBox:** Used to establish and manage the virtual lab environment.
 
-## 4. Methology
+## 4. Methodology
 
-This assessment follows these stages:
+The assessment followed these stages:
 
-1. **Lab Setup:** Booted up Kali Linux and Metasploitable2 virtual machines utilising an isolated host-only network.
-2. **Host Discovery:** Utilised Nmap to discover active hosts within the lab network
-3. **Port Scanning:** Scanned the target to discover the open ports and services that are exposed.
-4. **Service Enumeration:** Identification of the service versions and investigated thoroughly for potential vulnerable services.
-5. **Exploitation:** Utilised the appropriate Metasploit modules to check and validate the discovered vulnerabilities in a controlled isolated lab
-6. **Verfication:** Utilsed the system commands to check and verify the access that's obtained and assess the impact of each of the vulnerabilities.
+1. **Lab Setup:** Started the Kali Linux and Metasploitable2 virtual machines using an isolated host-only network.
+2. **Host Discovery:** Used Nmap to identify active hosts within the lab network.
+3. **Port Scanning:** Scanned the target to identify open ports and exposed services.
+4. **Service Enumeration:** Identified service versions and investigated potentially vulnerable services.
+5. **Exploitation:** Used the appropriate Metasploit modules to validate the identified vulnerabilities within the isolated lab.
+6. **Verification:** Used system commands to verify the access obtained and assess the impact of each vulnerability.
 
 ## 5. Findings
 
@@ -100,7 +100,7 @@ The Metasploit module `exploit/unix/irc/unreal_ircd_3281_backdoor` was used to e
 
 **Result:**
 
-Root access was confirmed using `whoami` and `id`. The target hostname was also verified as `metasploitable`.
+Root access was confirmed using the `whoami` and `id` commands. The target hostname was also verified as `metasploitable`.
 
 **Evidence:**
 
@@ -114,7 +114,7 @@ Root access was confirmed using `whoami` and `id`. The target hostname was also 
 
 Based on the findings, the following security measures are recommended:
 
-- **FTP:** Remove vulnerable or backdoored FTP software and replace it with a maintained, secure file transfer solution such as SFTP.
+- **FTP:** Remove vulnerable or backdoored FTP software and replace it with a maintained, secure file-transfer solution such as SFTP.
 - **SUID Permissions:** Review SUID-enabled executables and remove unnecessary SUID permissions. Restrict privileged execution to trusted applications.
 - **IRC:** Replace vulnerable UnrealIRCd versions with trusted, patched releases. Regularly update services and verify software integrity.
 - **General System Security:** Perform regular vulnerability assessments, maintain software updates and monitor exposed network services.
