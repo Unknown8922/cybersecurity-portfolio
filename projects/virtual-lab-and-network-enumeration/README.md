@@ -119,7 +119,15 @@ Based on the findings, the following security measures are recommended:
 - **IRC:** Replace vulnerable UnrealIRCd versions with trusted, patched releases. Regularly update services and verify software integrity.
 - **General System Security:** Perform regular vulnerability assessments, maintain software updates and monitor exposed network services.
 
-## 7. Learning Outcomes
+## 7. What I Would Do Differently
+
+If I were to repeat this assessment, I would improve how I approach service enumeration and evidence collection. I would keep a more structured record of the commands used, scan results and exploitation steps so that each finding is easier to review and reproduce.
+
+I would also spend more time researching the identified service versions and checking their associated vulnerabilities before selecting an exploitation method. This would help me understand the weaknesses more thoroughly rather than relying only on successful exploitation.
+
+Another improvement would be to test the recommended security fixes in the lab. For example, I would remove unnecessary SUID permissions from Nmap, replace vulnerable service versions and perform another scan to check whether the security weaknesses had been addressed.
+
+## 8. Learning Outcomes
 
 This practical exercise improved my understanding of network scanning, service enumeration and vulnerability exploitation in a controlled environment.
 
@@ -129,7 +137,7 @@ The three findings demonstrated different security weaknesses, including a backd
 
 I also learned the importance of verifying exploitation results rather than relying only on successful module execution. Commands such as `whoami` and `id` helped confirm the privileges obtained on the target system.
 
-## 8. Scope and Disclaimer
+## 9. Scope and Disclaimer
 
 All testing was conducted against an intentionally vulnerable Metasploitable2 virtual machine in an isolated Oracle VirtualBox host-only network. The assessment was limited to the lab environment, and no external systems were targeted.
 
