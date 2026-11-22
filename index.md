@@ -6,7 +6,55 @@ Hello! My name is Zoe Mirielle Varma. This portfolio showcases my cybersecurity 
 
 I am currently pursuing an MSc in Cyber Security at Universiti Malaya (UM), having previously completed a degree in Computing at the University of Bolton. My background in computing and software development led me to explore cybersecurity, particularly penetration testing and vulnerability assessment.
 
-I am interested in learning how security vulnerabilities are identified, exploited and addressed. Through my university studies, practical labs and independent learning, I am continuing to develop my technical skills and gain hands-on experience in the field.
+I am interested in learning how security vulnerabilities are identified, exploited and addressed. Through my university studies, practical labs and independent learning, I am continuing to develop my technical skills and gain hands-on experience in the field. I enjoy exploring different security tools, investigating vulnerabilities and understanding how weaknesses in systems and applications can be addressed.
+
+### Practical Learning Evidence
+
+I have completed hands-on cybersecurity exercises through TryHackMe and PortSwigger Web Security Academy. These activities have allowed me to practise different techniques involving network enumeration, Windows security, web application vulnerabilities and penetration testing.
+
+#### TryHackMe – Completed Rooms
+
+**1. Mr Robot CTF**
+
+[![Mr Robot CTF](assets/images/tryhackme/1-mr-robot.png)](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/assets/images/tryhackme/1-mr-robot.png)
+
+**2. Attacktive Directory**
+
+[![Attacktive Directory](assets/images/tryhackme/2-attacktive.png)](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/assets/images/tryhackme/2-attacktive.png)
+
+**3. Blue**
+
+[![Blue](assets/images/tryhackme/3-blue.png)](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/assets/images/tryhackme/3-blue.png)
+
+**4. Basic Pentesting**
+
+[![Basic Pentesting](assets/images/tryhackme/4-basic-pentesting.png)](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/assets/images/tryhackme/4-basic-pentesting.png)
+
+**5. RootMe**
+
+[![RootMe](assets/images/tryhackme/5-root-me.png)](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/assets/images/tryhackme/5-root-me.png)
+
+#### PortSwigger Web Security Academy – Completed Labs
+
+**1. SQL Injection**
+
+[![SQL Injection](assets/images/Portswigger/1-SQLi.png)](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/assets/images/Portswigger/1-SQLi.png)
+
+**2. Server-Side Request Forgery (SSRF)**
+
+[![SSRF](assets/images/Portswigger/2-SSRF.png)](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/assets/images/Portswigger/2-SSRF.png)
+
+**3. Path Traversal**
+
+[![Path Traversal](assets/images/Portswigger/3-Path-traversal.png)](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/assets/images/Portswigger/3-Path-traversal.png)
+
+**4. Access Control**
+
+[![Access Control](assets/images/Portswigger/4-access-control-vuln.png)](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/assets/images/Portswigger/4-access-control-vuln.png)
+
+**5. Authentication**
+
+[![Authentication](assets/images/Portswigger/5-Authentication.png)](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/assets/images/Portswigger/5-Authentication.png)
 
 ## Technical Skills
 
@@ -45,18 +93,17 @@ I am interested in learning how security vulnerabilities are identified, exploit
 
 | Lab | Difficulty | Vulnerability / Skill |
 |---|---|---|
-| [SQL injection vulnerability in WHERE clause allowing retrieval of hidden data](https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data) | Apprentice | SQL injection and retrieval of hidden data |
 | [SQL injection vulnerability allowing login bypass](https://portswigger.net/web-security/sql-injection/lab-login-bypass) | Apprentice | SQL injection and authentication bypass |
 | [Basic SSRF against the local server](https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost) | Apprentice | SSRF and accessing internal localhost resources |
-| [Basic SSRF against another back-end system](https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-backend-system) | Apprentice | SSRF and accessing internal back-end systems |
+| [File path traversal, simple case](https://portswigger.net/web-security/file-path-traversal/lab-simple) | Apprentice | File path traversal and unauthorised file access |
+| [File path traversal, traversal sequences blocked with absolute path bypass](https://portswigger.net/web-security/file-path-traversal/lab-absolute-path-bypass) | Practitioner | Path traversal using absolute path bypass |
+| [Insecure direct object references](https://portswigger.net/web-security/access-control/lab-insecure-direct-object-references) | Apprentice | Insecure Direct Object References (IDOR) |
 
-### Training and Practical Learning
+### University Coursework
 
-| Platform / Training | Area of Learning |
+| Institution | Area |
 |---|---|
-| TryHackMe | Hands-on cybersecurity exercises and practical labs |
-| PortSwigger Web Security Academy | Web application security and vulnerability testing |
-| University Coursework – Universiti Malaya | Cybersecurity, network security and penetration testing |
+| Universiti Malaya – MSc Cyber Security | Cybersecurity, network security and penetration testing coursework |
 
 ## Projects
 
@@ -94,11 +141,11 @@ My improvement goal is to become more confident in vulnerability assessment and 
 
 My career goal is to become a penetration tester and develop the skills needed to identify and assess security vulnerabilities in systems and applications. I am particularly interested in web application security, network penetration testing and vulnerability assessment.
 
-I hope to build on my computing background, cybersecurity certifications and practical experience through continued learning and hands-on practice. I want to use my skills to help organisations identify security weaknesses, understand potential risks and improve the security of their systems.
+I hope to build on my computing background, cybersecurity certifications and practical experience through continued learning and hands-on practice. I also want to improve my knowledge of vulnerability research, scripting and security testing techniques. In the future, I would like to work in a cybersecurity role where I can help organisations identify security weaknesses, understand potential risks and improve the security of their systems.
 
 ## Contact
 
 Thank you for visiting my cybersecurity portfolio.
 
 - **GitHub:** [Unknown8922](https://github.com/Unknown8922)
-- **LinkedIn:** https://www.linkedin.com/in/zoe-varma
+- **LinkedIn:** https://www.linkedin.com/in/zoe-varma/
