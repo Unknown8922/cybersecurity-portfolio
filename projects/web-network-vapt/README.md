@@ -58,7 +58,13 @@ The findings covered several areas, including exposed network services, web serv
 
 The assessment identified 15 findings, with High and Medium severity findings making up the majority. These results highlighted the importance of reviewing exposed services, web application security and system configurations.
 
-The detailed findings and technical evidence are not included here to protect information about the assessed environment.
+### Supporting Evidence
+
+The detailed findings, testing observations and technical evidence are documented in the sanitised VAPT report below.
+
+- [View Sanitised VAPT Report](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/web-network-vapt/final%20report%20-%20Copy%20%281%29.docx)
+
+The report has been reviewed to remove target identifiers and sensitive infrastructure information before publication.
 
 ## 6. Key Learning Outcomes
 
