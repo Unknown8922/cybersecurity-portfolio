@@ -10,7 +10,7 @@ The assessment focused on three findings: an FTP backdoor, an insecure SUID conf
 
 Oracle VirtualBox was used to set up an isolated virtual lab environment, with Kali Linux acting as the attacking machine and Metasploitable2 as the target.
 
-| Component | Details |
+| **Component** | **Details** |
 |---|---|
 | Attacker Machine | Kali Linux 2024.1 |
 | Target Machine | Metasploitable2 |
@@ -60,7 +60,7 @@ A command shell was successfully established. The `whoami` and `id` commands con
 
 **Evidence:**
 
-![VSFTPD exploitation and root verification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/vsftpd/4_exploit_and_root_shell_verification.png)
+[VSFTPD exploitation and root verification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/vsftpd/4_exploit_and_root_shell_verification.png) ([image](https://github.com/Unknown8922/cybersecurity-portfolio/raw/main/projects/virtual-lab-and-network-enumeration/evidence/vsftpd/4_exploit_and_root_shell_verification.png))
 
 ### 5.2 SUID Nmap Privilege Escalation
 
@@ -68,7 +68,7 @@ A command shell was successfully established. The `whoami` and `id` commands con
 
 **Identification:**
 
-The target was accessed through SSH using the `msfadmin` account. The command `ls -l /usr/bin/nmap` revealed that the Nmap executable had the SUID permission enabled and was owned by root.
+After accessing the target through SSH using the `msfadmin` account, I checked the permissions of the Nmap executable. The command `ls -l /usr/bin/nmap` revealed that the executable had the SUID permission enabled and was owned by root.
 
 **Exploitation:**
 
@@ -80,11 +80,11 @@ Privilege escalation was successful. The `whoami` command returned `root`, while
 
 **Evidence:**
 
-![SUID permissions and ownership](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/1-suid-nmap-permissions.png)
+[SUID permissions and ownership](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/1-suid-nmap-permissions.png) ([image](https://github.com/Unknown8922/cybersecurity-portfolio/raw/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/1-suid-nmap-permissions.png))
 
-![Nmap version](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/2-nmap-version.png)
+[Nmap version](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/2-nmap-version.png) ([image](https://github.com/Unknown8922/cybersecurity-portfolio/raw/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/2-nmap-version.png))
 
-![SUID Nmap privilege escalation](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/3-suid-nmap-root-escalation.png)
+[SUID Nmap privilege escalation](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/3-suid-nmap-root-escalation.png) ([image](https://github.com/Unknown8922/cybersecurity-portfolio/raw/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/3-suid-nmap-root-escalation.png))
 
 ### 5.3 UnrealIRCd 3.2.8.1 Backdoor (CVE-2010-2075)
 
@@ -104,11 +104,19 @@ Root access was confirmed using the `whoami` and `id` commands. The target hostn
 
 **Evidence:**
 
-![UnrealIRCd version identification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/1-unrealircd-version-identification.png)
+[UnrealIRCd version identification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/1-unrealircd-version-identification.png) ([image](https://github.com/Unknown8922/cybersecurity-portfolio/raw/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/1-unrealircd-version-identification.png))
 
-![UnrealIRCd successful exploitation](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/2-unrealircd-exploitation.png)
+[UnrealIRCd successful exploitation](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/2-unrealircd-exploitation.png) ([image](https://github.com/Unknown8922/cybersecurity-portfolio/raw/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/2-unrealircd-exploitation.png))
 
-![UnrealIRCd root access verification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/3-unrealircd-root-verification.png)
+[UnrealIRCd root access verification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/3-unrealircd-root-verification.png) ([image](https://github.com/Unknown8922/cybersecurity-portfolio/raw/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/3-unrealircd-root-verification.png))
+
+### 5.4 Results Summary
+
+| Finding | Security Impact | Result |
+|---|---|---|
+| VSFTPD 2.3.4 backdoor | Remote root access | Successful |
+| SUID Nmap misconfiguration | Local privilege escalation | Successful |
+| UnrealIRCd 3.2.8.1 backdoor | Remote root access | Successful |
 
 ## 6. Security Recommendations
 
