@@ -1,6 +1,4 @@
-# Cybersecurity Portfolio
-
-Welcome to My Cybersecurity Portfolio!
+## Welcome to My Cybersecurity Portfolio!
 
 Hello! My name is Zoe Mirielle Varma. This portfolio showcases my cybersecurity skills, projects, certifications and learning journey as I continue developing my knowledge and practical experience in cybersecurity.
 
@@ -54,30 +52,6 @@ I have completed practical exercises on PortSwigger Web Security Academy coverin
 | File path traversal, simple case | Apprentice | File path traversal and unauthorised file access |
 | File path traversal, traversal sequences blocked with absolute path bypass | Practitioner | Path traversal using absolute path bypass |
 | Insecure direct object references | Apprentice | Insecure Direct Object References (IDOR) |
-
-### PortSwigger Web Security Academy – Practical Evidence
-
-The following screenshots provide examples of my completed practical exercises. They are selected examples and do not represent every lab I have completed.
-
-**1. SQL Injection**
-
-![SQL Injection](assets/images/Portswigger/1-SQLi.png)
-
-**2. Server-Side Request Forgery (SSRF)**
-
-![SSRF](assets/images/Portswigger/2-SSRF.png)
-
-**3. Path Traversal**
-
-![Path Traversal](assets/images/Portswigger/3-Path-traversal.png)
-
-**4. Access Control**
-
-![Access Control](assets/images/Portswigger/4-access-control-vuln.png)
-
-**5. Authentication**
-
-![Authentication](assets/images/Portswigger/5-Authentication.png)
 
 ### 3.4 University Coursework – In Progress
 
