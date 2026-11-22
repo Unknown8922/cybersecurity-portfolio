@@ -60,7 +60,12 @@ A command shell was successfully established. The `whoami` and `id` commands con
 
 **Evidence:**
 
-[VSFTPD exploitation and root verification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/vsftpd/4_exploit_and_root_shell_verification.png) ([image](https://github.com/Unknown8922/cybersecurity-portfolio/raw/main/projects/virtual-lab-and-network-enumeration/evidence/vsftpd/4_exploit_and_root_shell_verification.png))
+1. [Network host discovery](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/vsftpd/1_network-host-discovery.png)
+2. [Nmap scan results](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/vsftpd/2_nmap_scan.png)
+3. [Metasploit console setup](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/vsftpd/3_using-msfconsole.png)
+4. [Exploitation and root shell verification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/vsftpd/4_exploit_and_root_shell_verification.png)
+5. [Target system identification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/vsftpd/5_Target_System_Identification.png)
+6. [Service identification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/vsftpd/6_service_identification.png)
 
 ### 5.2 SUID Nmap Privilege Escalation
 
@@ -69,6 +74,8 @@ A command shell was successfully established. The `whoami` and `id` commands con
 **Identification:**
 
 After accessing the target through SSH using the `msfadmin` account, I checked the permissions of the Nmap executable. The command `ls -l /usr/bin/nmap` revealed that the executable had the SUID permission enabled and was owned by root.
+
+The SUID permission allows an executable to run with the privileges of its file owner. Since Nmap was owned by root and had SUID enabled, its interactive mode could be abused to obtain elevated privileges.
 
 **Exploitation:**
 
@@ -80,11 +87,9 @@ Privilege escalation was successful. The `whoami` command returned `root`, while
 
 **Evidence:**
 
-[SUID permissions and ownership](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/1-suid-nmap-permissions.png) ([image](https://github.com/Unknown8922/cybersecurity-portfolio/raw/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/1-suid-nmap-permissions.png))
-
-[Nmap version](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/2-nmap-version.png) ([image](https://github.com/Unknown8922/cybersecurity-portfolio/raw/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/2-nmap-version.png))
-
-[SUID Nmap privilege escalation](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/3-suid-nmap-root-escalation.png) ([image](https://github.com/Unknown8922/cybersecurity-portfolio/raw/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/3-suid-nmap-root-escalation.png))
+1. [SUID permissions and ownership](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/1-suid-nmap-permissions.png)
+2. [Nmap version](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/2-nmap-version.png)
+3. [SUID Nmap privilege escalation](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/suid-nmap/3-suid-nmap-root-escalation.png)
 
 ### 5.3 UnrealIRCd 3.2.8.1 Backdoor (CVE-2010-2075)
 
@@ -104,15 +109,13 @@ Root access was confirmed using the `whoami` and `id` commands. The target hostn
 
 **Evidence:**
 
-[UnrealIRCd version identification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/1-unrealircd-version-identification.png) ([image](https://github.com/Unknown8922/cybersecurity-portfolio/raw/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/1-unrealircd-version-identification.png))
-
-[UnrealIRCd successful exploitation](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/2-unrealircd-exploitation.png) ([image](https://github.com/Unknown8922/cybersecurity-portfolio/raw/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/2-unrealircd-exploitation.png))
-
-[UnrealIRCd root access verification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/3-unrealircd-root-verification.png) ([image](https://github.com/Unknown8922/cybersecurity-portfolio/raw/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/3-unrealircd-root-verification.png))
+1. [UnrealIRCd version identification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/1-unrealircd-version-identification.png)
+2. [UnrealIRCd successful exploitation](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/2-unrealircd-exploitation.png)
+3. [UnrealIRCd root access verification](https://github.com/Unknown8922/cybersecurity-portfolio/blob/main/projects/virtual-lab-and-network-enumeration/evidence/unrealircd/3-unrealircd-root-verification.png)
 
 ### 5.4 Results Summary
 
-| Finding | Security Impact | Result |
+| **Finding** | **Security Impact** | **Result** |
 |---|---|---|
 | VSFTPD 2.3.4 backdoor | Remote root access | Successful |
 | SUID Nmap misconfiguration | Local privilege escalation | Successful |
