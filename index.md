@@ -1,5 +1,3 @@
-## Welcome to My Cybersecurity Portfolio!
-
 Hello! My name is Zoe Mirielle Varma. This portfolio showcases my cybersecurity skills, projects, certifications and learning journey as I continue developing my knowledge and practical experience in cybersecurity.
 
 ## 1. About Me
