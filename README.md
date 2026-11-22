@@ -2,6 +2,8 @@
 
 Welcome to my cybersecurity portfolio. This repository showcases my cybersecurity projects, practical exercises, technical skills, certifications and learning journey as I develop my knowledge and experience in cybersecurity.
 
+This portfolio includes practical work in vulnerability assessment, network enumeration and web application security testing.
+
 ## Live Portfolio
 
 Visit my portfolio website:
