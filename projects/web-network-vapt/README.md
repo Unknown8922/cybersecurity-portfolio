@@ -8,7 +8,7 @@ This experience gave me a better understanding of how vulnerabilities in web app
 
 ## 2. Engagement Details
 
-| Item | Details |
+| **Item** | **Details** |
 |---|---|
 | Assessment Type | Web and Network VAPT |
 | Assessment Period | 22 November 2025 – 20 December 2025 |
@@ -46,7 +46,7 @@ The assessment was carried out in several stages:
 
 A total of 15 findings were identified during the assessment.
 
-| Severity | Number of Findings |
+| **Severity** | **Number of Findings** |
 |---|---:|
 | Critical | 0 |
 | High | 4 |
@@ -55,6 +55,8 @@ A total of 15 findings were identified during the assessment.
 | **Total** | **15** |
 
 The findings covered several areas, including exposed network services, web server configurations, DNS security and access control.
+
+The assessment identified 15 findings, with High and Medium severity findings making up the majority. These results highlighted the importance of reviewing exposed services, web application security and system configurations.
 
 The detailed findings and technical evidence are not included here to protect information about the assessed environment.
 
@@ -68,7 +70,7 @@ This internship gave me the opportunity to apply some of my cybersecurity knowle
 - Examining web applications and network service configurations.
 - Checking and validating potential vulnerabilities within the approved scope.
 - Understanding vulnerability severity and suggesting possible ways to address security issues.
-- Preparing and documenting findings in a VAPT report.
+- Preparing a VAPT report with technical findings, business impact, remediation recommendations and prioritised actions.
 
 One of the main things I learned was how the different stages of a VAPT engagement fit together. I also gained a better understanding of the importance of documenting findings clearly so that organisations can understand the risks and take steps to address them.
 
